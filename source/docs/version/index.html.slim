@@ -23,3 +23,4 @@ div.p-container.p-flex-container
           = partial "partials/doc_item_arguments", locals: { item: item }
         - if item.example.present?
           = partial "partials/doc_item_example", locals: { item: item }
+        = code_demo(item.context.name)

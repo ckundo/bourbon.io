@@ -1,4 +1,13 @@
 module ApplicationHelpers
+  def code_demo(name)
+    root = Middleman::Application.root
+    file_path = "#{root}/source/code_demos/_#{name}.slim"
+    # return File.read(file_path) if File.exists?(file_path)
+
+    if File.exists?(file_path)
+      partial file_path, locals: { item: item }
+  end
+
   def github_file_url(file_path, version)
     "https://github.com/thoughtbot/bourbon/blob/v#{version}/core/#{file_path}"
   end
