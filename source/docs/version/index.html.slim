@@ -35,3 +35,8 @@ div.p-grid-container
           = partial "doc_item_properties", locals: { item: item }
         - if item.example.present?
           = partial "doc_item_example", locals: { item: item }
+
+      = link_to "Edit This", sassdoc_comments_highlight_url(item.file.path,
+                                                            version,
+                                                            item.commentRange.start,
+                                                            item.commentRange.end)

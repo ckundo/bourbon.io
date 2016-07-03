@@ -32,6 +32,10 @@ module ApplicationHelpers
     File.join(ENV["SITE_URL"], path, "/")
   end
 
+  def sassdoc_comments_highlight_url(file_path, version, start, stop)
+    github_file_url(file_path, version) + "#L#{start}-L#{stop}"
+  end
+
   def svg(name)
     root = Middleman::Application.root
     file_path = "#{root}/source/images/#{name}.svg"
