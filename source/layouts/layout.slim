@@ -8,7 +8,9 @@ html lang="en"
     title=page_title
     - if content_for?(:preferred_path)
       link rel="canonical" href=preferred_url
-    = stylesheet_link_tag "main"
+    / = inline_css "app-shell"
+    = inline_css "main"
+    / = stylesheet_link_tag "main"
     = stylesheet_link_tag \
       "https://cloud.typenetwork.com/projects/218/fontface.css"
   body
