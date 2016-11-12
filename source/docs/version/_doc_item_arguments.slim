@@ -21,6 +21,8 @@ div.doc-item__section
             code
               | $
               = argument.name
+            - if argument.default.nil?
+              | Required
           td.doc-item__no-wrap-column
             code
               = argument.type
